@@ -1,0 +1,37 @@
+:root {
+  /* Brand green — sampled from the Lozano Imóveis mark */
+  --green-900: oklch(16% 0.02 165);
+  --green-800: oklch(24% 0.028 165);
+  --green-700: oklch(32% 0.032 165); /* matches logo background */
+  --green-600: oklch(40% 0.034 165);
+  --green-500: oklch(50% 0.032 165);
+  --green-300: oklch(75% 0.022 165);
+  --green-100: oklch(93% 0.012 165);
+
+  /* Warm neutrals */
+  --neutral-000: oklch(99% 0.004 80);
+  --neutral-100: oklch(96% 0.005 80);
+  --neutral-200: oklch(90% 0.006 80);
+  --neutral-400: oklch(70% 0.006 80);
+  --neutral-600: oklch(48% 0.006 80);
+  --neutral-900: oklch(17% 0.006 165);
+
+  /* Gold accent — for CTAs, prices, highlights */
+  --gold-100: oklch(93% 0.045 65);
+  --gold-500: oklch(68% 0.13 60);
+  --gold-700: oklch(50% 0.11 58);
+
+  /* Semantic */
+  --surface-bg: var(--neutral-000);
+  --surface-card: #ffffff;
+  --surface-brand: var(--green-700);
+  --surface-brand-dark: var(--green-900);
+  --text-primary: var(--neutral-900);
+  --text-muted: var(--neutral-600);
+  --text-inverse: var(--neutral-000);
+  --border-subtle: var(--neutral-200);
+  --accent: var(--gold-500);
+  --accent-dark: var(--gold-700);
+  --link: var(--green-700);
+  --link-hover: var(--green-900);
+}
