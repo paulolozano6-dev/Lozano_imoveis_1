@@ -1,0 +1,24 @@
+<!-- @dsCard group="Social Templates" viewport="1200x520" subtitle="Story, Reel cover, Carousel" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<div id="root" style="background:var(--surface-bg);padding:24px"></div>
+<script type="text/babel">
+  const { Story, ReelCover, CarouselSlide } = window.LozanoDS;
+  const scaleBox = (w, h, s) => ({ width: w * s, height: h * s, overflow: 'hidden', position: 'relative', borderRadius: 12, boxShadow: 'var(--shadow-card)' });
+  const inner = (w, h, s) => ({ transform: `scale(${s})`, transformOrigin: 'top left', width: w, height: h });
+  function Demo() {
+    const s = 0.28;
+    return (
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, fontFamily: 'var(--font-body)' }}>
+        <div style={scaleBox(1080, 1920, s)}><div style={inner(1080, 1920, s)}><Story /></div></div>
+        <div style={scaleBox(1080, 1920, s)}><div style={inner(1080, 1920, s)}><ReelCover /></div></div>
+        <div style={scaleBox(1080, 1350, s)}><div style={inner(1080, 1350, s)}><CarouselSlide variant="cover" index={1} total={5} /></div></div>
+        <div style={scaleBox(1080, 1350, s)}><div style={inner(1080, 1350, s)}><CarouselSlide variant="detail" index={2} total={5} title="Sala de estar" body="Ambiente integrado com varanda gourmet e luz natural o dia todo." /></div></div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
